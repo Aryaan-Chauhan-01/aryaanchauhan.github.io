@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aryaan Chauhan | Technical Resume</title>
+  <style>
+    :root {
+      --blue: #1e88e5;
+      --yellow: #fbc02d;
+      --red: #e53935;
+      --green: #43a047;
+      --dark: #1f2933;
+    }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, var(--blue), var(--green));
+      color: #1a1a1a;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: #ffffffee;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      border-bottom: 3px solid var(--yellow);
+      z-index: 10;
+    }
+    nav a {
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--blue);
+    }
+    nav a:hover {
+      color: var(--red);
+    }
+    .hero {
+      background: url('20231106_162214.jpg') center/cover no-repeat;
+      padding: 80px 20px;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.75);
+    }
+    .hero-content {
+      position: relative;
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .hero img {
+      width: 180px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 4px solid var(--blue);
+    }
+    .hero h1 {
+      margin: 0;
+      font-size: 36px;
+      color: var(--dark);
+    }
+    .hero p {
+      font-size: 18px;
+      color: var(--dark);
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+    }
+    section {
+      margin-top: 40px;
+    }
+    h2 {
+      color: var(--blue);
+      border-left: 6px solid var(--yellow);
+      padding-left: 10px;
+    }
+    h3 {
+      color: var(--green);
+    }
+    ul li {
+      margin-bottom: 6px;
+    }
+    .skills span {
+      display: inline-block;
+      margin: 6px 6px 0 0;
+      padding: 6px 10px;
+      background: #e3f2fd;
+      border-left: 4px solid var(--red);
+      font-size: 14px;
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+      background: var(--dark);
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#summary">Summary</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#certifications">Certifications</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-content">
+    <img src="20231106_162214.jpg" alt="Aryaan Chauhan" />
+    <div>
+      <h1>Aryaan Chauhan</h1>
+      <p><strong>Associate Consultant – Oracle Fusion HCM</strong><br />Computer Science Engineer</p>
+      <p>
+        <a href="mailto:aryaanchauhan01@gmail.com">Email</a> | 
+        <a href="https://www.linkedin.com/in/aryaan-chauhan-9357441ba" target="_blank">LinkedIn</a> | 
+        <a href="https://github.com/Aryaan-Chauhan-01" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+<section id="summary">
+  <h2>Professional Summary</h2>
+  <p>Computer Science graduate with hands-on experience as an Associate Consultant at Mastek India, specializing in Oracle Fusion HCM (Core HR, Absence Management, Benefits). Strong foundation in software development, machine learning, and enterprise consulting.</p>
+</section>
+
+<section id="experience">
+  <h2>Professional Experience</h2>
+  <h3>Mastek India – Associate Consultant (Oracle Fusion HCM)</h3>
+  <p><em>June 2025 – Present</em></p>
+  <ul>
+    <li>Working on Oracle Fusion HCM Core HR, Absence, and Benefits modules.</li>
+    <li>Supporting functional configuration, testing, and documentation.</li>
+    <li>Participating in SIT/UAT and issue resolution.</li>
+  </ul>
+
+  <h3>Mastek India – Oracle Fusion HCM Intern</h3>
+  <p><em>Jan 2024 – Mar 2024</em></p>
+  <ul>
+    <li>Assisted in Core HR, Absence, and Benefits workflows.</li>
+    <li>Supported data validation and functional analysis.</li>
+  </ul>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <p><strong>Vellore Institute of Technology, Chennai</strong><br />BTech CSE (2020–2024) | CGPA: 8.02<br />JEE Main 2020: 95.79 Percentile</p>
+</section>
+
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <span>Python</span><span>Java</span><span>C++</span><span>SQL</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+    <span>Oracle Fusion HCM</span><span>Core HR</span><span>Absence</span><span>Benefits</span>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <ul>
+    <li><strong>Food Classification (YOLOv8):</strong> Image-based food detection system.</li>
+    <li><strong>Twitch Analytics:</strong> ML-based streamer performance analysis.</li>
+    <li><strong>Cinema Hall Booking System:</strong> Full-stack PHP application.</li>
+  </ul>
+</section>
+
+<section id="certifications">
+  <h2>Certifications</h2>
+  <ul>
+    <li>Microsoft Security, Compliance & Identity Fundamentals</li>
+    <li>Responsive Web Design – freeCodeCamp</li>
+    <li>Agile Project Management – HP Life</li>
+  </ul>
+</section>
+
+</div>
+
+<footer>
+  © 2026 Aryaan Chauhan | Technical Resume Webpage
+</footer>
+
+</body>
+</html>
