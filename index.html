@@ -108,6 +108,56 @@
       padding: 20px;
       background: var(--dark);
     }
+    #chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 320px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+#chatbot-header {
+  background: #111827;
+  color: #fff;
+  padding: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}
+
+#chatbot-body {
+  background: #f9fafb;
+  display: none;
+  flex-direction: column;
+}
+
+#chatlog {
+  height: 220px;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+#chatlog p {
+  margin: 6px 0;
+}
+
+#chatlog b {
+  color: #111827;
+}
+
+#userInput {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  padding: 10px;
+  width: 100%;
+  font-size: 14px;
+  outline: none;
+}
   </style>
 </head>
 <body>
@@ -197,26 +247,47 @@
 <footer>
   © 2026 Aryaan Chauhan | Technical Resume Webpage
 </footer>
-<div id="chatbox" style="width:300px;border:1px solid #ccc;padding:10px;">
-  <div id="chatlog" style="height:200px;overflow:auto;"></div>
-  <input id="userInput" placeholder="Ask about my work..." style="width:100%;" />
+
+  <div id="chatbot-container">
+  <div id="chatbot-header" onclick="toggleChat()">
+    💬 Ask About Me
+  </div>
+
+  <div id="chatbot-body">
+    <div id="chatlog"></div>
+    <input
+      id="userInput"
+      type="text"
+      placeholder="Ask about my skills, AI, goals..."
+      onkeypress="handleKeyPress(event)"
+    />
+  </div>
 </div>
+
 
 <script src="knowledge.js"></script>
 <script src="chatbot.js"></script>
 
 <script>
-document.getElementById("userInput").addEventListener("keypress", function(e) {
-  if (e.key === "Enter") {
-    const input = this.value;
-    this.value = "";
+function toggleChat() {
+  const body = document.getElementById("chatbot-body");
+  body.style.display = body.style.display === "none" ? "flex" : "none";
+}
 
+function handleKeyPress(e) {
+  if (e.key === "Enter") {
+    const input = document.getElementById("userInput");
     const chatlog = document.getElementById("chatlog");
-    chatlog.innerHTML += `<p><b>You:</b> ${input}</p>`;
-    chatlog.innerHTML += `<p><b>Bot:</b> ${getBotResponse(input)}</p>`;
+    const message = input.value.trim();
+    if (!message) return;
+
+    chatlog.innerHTML += `<p><b>You:</b> ${message}</p>`;
+    chatlog.innerHTML += `<p><b>Bot:</b> ${getBotResponse(message)}</p>`;
     chatlog.scrollTop = chatlog.scrollHeight;
+
+    input.value = "";
   }
-});
+}
 </script>
 
 </body>
