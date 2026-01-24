@@ -269,11 +269,18 @@
 <script src="chatbot.js"></script>
 
 <script>
+
 function toggleChat() {
   const body = document.getElementById("chatbot-body");
-  body.style.display = body.style.display === "none" ? "flex" : "none";
-}
+  const chatlog = document.getElementById("chatlog");
 
+  if (body.style.display === "none") {
+    body.style.display = "flex";
+  } else {
+    body.style.display = "none";
+    chatlog.innerHTML = ""; // 👈 clears chat when closed
+  }
+}
 function handleKeyPress(e) {
   if (e.key === "Enter") {
     const input = document.getElementById("userInput");
