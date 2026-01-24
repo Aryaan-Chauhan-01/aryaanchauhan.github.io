@@ -197,6 +197,27 @@
 <footer>
   © 2026 Aryaan Chauhan | Technical Resume Webpage
 </footer>
+<div id="chatbox" style="width:300px;border:1px solid #ccc;padding:10px;">
+  <div id="chatlog" style="height:200px;overflow:auto;"></div>
+  <input id="userInput" placeholder="Ask about my work..." style="width:100%;" />
+</div>
+
+<script src="knowledge.js"></script>
+<script src="chatbot.js"></script>
+
+<script>
+document.getElementById("userInput").addEventListener("keypress", function(e) {
+  if (e.key === "Enter") {
+    const input = this.value;
+    this.value = "";
+
+    const chatlog = document.getElementById("chatlog");
+    chatlog.innerHTML += `<p><b>You:</b> ${input}</p>`;
+    chatlog.innerHTML += `<p><b>Bot:</b> ${getBotResponse(input)}</p>`;
+    chatlog.scrollTop = chatlog.scrollHeight;
+  }
+});
+</script>
 
 </body>
 </html>
