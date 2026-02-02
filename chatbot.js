@@ -18,7 +18,7 @@ function getBotResponse(userInput) {
   }
 
   if (input.includes("goal") || input.includes("future")) {
-    return "My goal is to build a flexible career, help people using technology, and eventually build a company generating ₹90 crore annually.";
+    return "My goal is to build a flexible career, help people using technology, and eventually earn ₹90 crore annually.";
   }
 
   return "I can answer questions about my skills, experience, AI work, achievements, or career goals.";
